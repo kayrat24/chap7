@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  
+        <div class="post-entry">
+            
+            <h2>Название поста: {{post.title}}</h2>
+            <p>Содержание: {{post.body}}</p>
+            <p>Автор: {{post.author.username}}</p>
+        </div>
+        <button<><a href="{% url 'post_edit' post.pk %}">+ Edit Blog Post</a></button>
+        <button><p><a href="{% url 'post_delete' post.pk %}">+ Delete Blog Post</a></p></button>
+{% endblock content %}
